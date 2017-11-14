@@ -1,0 +1,85 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0000000001
+      author: Alexandr_I
+      preConditions:
+        - not:
+          - onFail: MARK_RAN
+          - tableExists:
+              tableName: Product
+      changes:
+        - createTable:
+            tableName: Currency
+            columns:
+              - column:
+                  name: ID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: SYMBOL
+                  type: varchar
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: ISO_NAME
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ISO_CODE
+                  type: int
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: Product
+            columns:
+              - column:
+                  name: ID
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: PRICE
+                  type: currency
+                  constraints:
+                    nullable: false
+              - column:
+                  name: NAME
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: DESCRIPTION
+                  type: varchar
+                  constraints:
+                    nullable: true
+              - column:
+                  name: PICTURE_URL
+                  type: varchar
+                  constraints:
+                    nullable: true
+              - column:
+                  name: COUNT
+                  type: int
+                  constraints:
+                    nullable: true
+              - column:
+                  name: BAR_CODE
+                  type: varchar
+                  constraints:
+                    nullable: false
+              - column:
+                  name: CURRENCY_ID
+                  type: int
+                  constraints:
+                    nullable: true
+                    foreignKeyName: fk_currency
+                    references: Currency(ID)
+                  
+                  

@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 0000000002
+      author: Alexandr_I
+      changes:
+        - loadData:
+            tableName: Currency
+            encoding: UTF-8
+            file: db/changelog/data/Currency.data
+            separator: ;
+            columns:
+              - column:
+                  name: ID
+                  type: NUMERIC
+              - column:
+                  name: SYMBOL
+                  type: STRING
+              - column:
+                  name: ISO_NAME
+                  type: STRING
+              - column:
+                  name: ISO_CODE
+                  type: NUMERIC
+        - loadData:
+            tableName: Product
+            encoding: UTF-8
+            file: db/changelog/data/Product.data
+            separator: ;
+            columns:
+              - column:
+                  name: ID
+                  type: NUMERIC
+              - column:
+                  name: PRICE
+                  type: NUMERIC
+              - column:
+                  name: NAME
+                  type: STRING
+              - column:
+                  name: DESCRIPTION
+                  type: STRING
+              - column:
+                  name: PICTURE_URL
+                  type: STRING
+              - column:
+                  name: COUNT
+                  type: NUMERIC
+              - column:
+                  name: BAR_CODE
+                  type: STRING
+              - column:
+                  name: CURRENCY_ID
+                  type: NUMERIC
+                  

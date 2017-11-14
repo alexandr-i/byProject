@@ -1,0 +1,21 @@
+security:
+  oauth2:
+    client:
+      clientId: scanner-service
+      clientSecret: ${ACCOUNT_SERVICE_PASSWORD}
+      accessTokenUri: http://auth-service:5000/uaa/oauth/token
+      grant-type: client_credentials
+      scope: server
+
+spring:
+  data:
+    mongodb:
+      host: scanner-mongodb
+      username: user
+      password: ${MONGODB_PASSWORD}
+      database: scanner
+      port: 27017
+
+server:
+  context-path: /api/scanner
+  port: 6000

@@ -1,0 +1,7 @@
+PRICE;NAME;DESCRIPTION;PICTURE_URL;COUNT;BAR_CODE;CURRENCY_ID
+10.55;Milk;Cow Milk;http://localhost:8080/static/images/milk.jpg;55;6548435184;1
+15.64;Apple;Red Apple;http://localhost:8080/static/images/apple.png;96;9684621984;1
+8.05;Bread;Black Bread;http://localhost:8080/static/images/bread.png;854;879196519;1
+24.49;Shrimp;Big Big Shrimp;http://localhost:8080/static/images/shrimp.jpg;16;8912318519;1
+3.19;Suchi;Meet Suchi;http://localhost:8080/static/images/apple.png;96;23168461984;1
+65.94;Sugar;White Milk;http://localhost:8080/static/images/sugar.png;96;3549561898974;1
